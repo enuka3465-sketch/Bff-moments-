@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ A Special Message For You ✨</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0714;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Floating stars */
+.star {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+    opacity: .7;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); opacity: .3; }
+    50% { transform: translateY(-35px); opacity: 1; }
+}
+
+.container {
+    width: 92%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 25px;
+    padding: 30px 20px;
+    box-shadow: 0 0 35px rgba(180,70,255,.25);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #d8b4fe;
+    font-size: 17px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#9b4dff,#ff4fa3);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,79,163,.4);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    margin-top: 30px;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #f5eaff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.5);
+    transition: .4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.section {
+    margin-top: 35px;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #bda9ca;
+}
+
+.heart {
+    font-size: 35px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.25); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background stars -->
+<div class="star" style="top:10%;left:15%;"></div>
+<div class="star" style="top:25%;left:80%;"></div>
+<div class="star" style="top:50%;left:20%;"></div>
+<div class="star" style="top:70%;left:85%;"></div>
+<div class="star" style="top:85%;left:35%;"></div>
+<div class="star" style="top:40%;left:60%;"></div>
+
+<section class="hero">
+<div class="container">
+
+<div class="card">
+
+<div class="heart">💖</div>
+
+<h1>Happy Birthday! 🎂</h1>
+
+<p class="subtitle">
+Today is all about celebrating YOU ✨
+</p>
+
+<button onclick="showMessage()">
+💌 Open Your Surprise
+</button>
+
+<div id="message" class="hidden">
+
+<div class="message">
+
+<p>
+Today is a special day because it's the day
+someone truly amazing came into this world. ❤️
+</p>
+
+<p>
+I just wanted to take a moment to remind you
+how special you are and how much you mean to
+the people around you.
+</p>
+
+<p>
+May this new chapter bring you happiness,
+beautiful memories, success and everything
+you've been wishing for. ✨
+</p>
+
+<p>
+Keep smiling, keep being yourself and never
+forget how loved you are. 🥹❤️
+</p>
+
+<p>
+<strong>Happy Birthday once again! 🎉🎂</strong>
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>📸 Some Beautiful Memories</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg" alt="Memory 1">
+
+<img src="photo2.jpg" alt="Memory 2">
+
+<img src="photo3.jpg" alt="Memory 3">
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>✨ One More Thing...</h2>
+
+<p class="message">
+I hope these little memories remind you
+of how many beautiful moments are still
+waiting for you. ❤️
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+Made with ❤️ by Little Moments
+</div>
+
+</div>
+
+</div>
+</section>
+
+<script>
+function showMessage() {
+    const message = document.getElementById("message");
+    message.classList.remove("hidden");
+
+    setTimeout(() => {
+        message.scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 100);
+}
+</script>
+
+</body>
+</html>
